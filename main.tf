@@ -6,7 +6,7 @@ resource "aws_vpc" "dev_vpc" {
   tags = {
     Name = "dev-vpc"
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
 
@@ -19,7 +19,7 @@ resource "aws_subnet" "dev_public_subnet" {
   tags = {
     Name        = "dev-public"
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_internet_gateway" "dev_igw" {
   tags = {
     Name        = "dev-igw"
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_route_table" "dev_rt" {
   tags = {
     Name        = "dev-rt"
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
 
@@ -75,7 +75,7 @@ resource "aws_security_group" "dev_sg" {
 
   tags = {
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
 
@@ -99,6 +99,6 @@ resource "aws_instance" "dev_node" {
   tags = {
     Name        = "dev-node"
     environment = "dev"
-    created_by  = "terraform"
+    managed  = "terraform"
   }
 }
